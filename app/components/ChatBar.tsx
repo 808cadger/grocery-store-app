@@ -48,7 +48,7 @@ export interface ChatBarRef {
 }
 
 const FAB_SIZE = 62;
-const DEFAULT_X = SCREEN_W - FAB_SIZE - 20;
+const DEFAULT_X = SCREEN_W - 124 - 20;
 const DEFAULT_Y = SCREEN_H - FAB_SIZE - (Platform.OS === "ios" ? 130 : 110);
 
 function formatTime(d: Date) {
@@ -283,7 +283,7 @@ const ChatBarInner = forwardRef<ChatBarRef, Props>(
         >
           {!isUser && (
             <View style={styles.botAvatar}>
-              <Text style={styles.botAvatarText}>🛒</Text>
+              <Text style={styles.botAvatarText}>AI</Text>
             </View>
           )}
           <View style={[styles.bubbleCol, isUser && styles.bubbleColUser]}>
@@ -359,7 +359,7 @@ const ChatBarInner = forwardRef<ChatBarRef, Props>(
           )}
           <Animated.View style={{ transform: [{ scale: pulseAnim }] }}>
             <View style={[styles.fab, storeEntered && styles.fabActive]}>
-              <Ionicons name="sparkles" size={27} color="#fff" />
+              <View style={styles.avatarFace}><Text style={styles.avatarFaceText}>AI</Text></View><View style={styles.avatarLaunchCopy}><Text style={styles.avatarLaunchTitle}>Talk</Text><Text style={styles.avatarLaunchSub}>or scan</Text></View>
               {storeEntered && <View style={styles.fabPulseDot} />}
             </View>
           </Animated.View>
@@ -387,7 +387,7 @@ const ChatBarInner = forwardRef<ChatBarRef, Props>(
             <View style={[styles.header, { paddingTop: insets.top + 10 }]}>
               <View style={styles.headerLeft}>
                 <View style={styles.headerAvatar}>
-                  <Ionicons name="sparkles" size={22} color="#fff" />
+                  <Text style={styles.headerAvatarText}>AI</Text>
                 </View>
                 <View style={{ flex: 1 }}>
                   <Text style={styles.headerTitle}>time~save~shopping</Text>
@@ -537,7 +537,7 @@ const styles = StyleSheet.create({
   fabWrapper: {
     position: "absolute",
     zIndex: 300,
-    width: FAB_SIZE,
+    width: 124,
     height: FAB_SIZE,
     alignItems: "center",
     justifyContent: "center",
@@ -551,12 +551,15 @@ const styles = StyleSheet.create({
     borderColor: "#22c55e",
   },
   fab: {
-    width: FAB_SIZE,
+    minWidth: 124,
     height: FAB_SIZE,
     borderRadius: FAB_SIZE / 2,
     backgroundColor: "#22c55e",
+    flexDirection: "row",
+    gap: 9,
     justifyContent: "center",
     alignItems: "center",
+    paddingHorizontal: 12,
     shadowColor: "#22c55e",
     shadowOffset: { width: 0, height: 6 },
     shadowOpacity: 0.5,
@@ -564,6 +567,20 @@ const styles = StyleSheet.create({
     elevation: 14,
   },
   fabActive: { backgroundColor: "#15803d" },
+  avatarFace: {
+    width: 38,
+    height: 38,
+    borderRadius: 19,
+    backgroundColor: "rgba(255,255,255,0.22)",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.46)",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  avatarFaceText: { color: "#fff", fontSize: 13, fontWeight: "900" },
+  avatarLaunchCopy: { justifyContent: "center" },
+  avatarLaunchTitle: { color: "#fff", fontSize: 14, fontWeight: "900", lineHeight: 16 },
+  avatarLaunchSub: { color: "rgba(255,255,255,0.82)", fontSize: 11, fontWeight: "700" },
   fabPulseDot: {
     position: "absolute",
     top: 9,
@@ -609,6 +626,7 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(255,255,255,0.2)",
     justifyContent: "center", alignItems: "center",
   },
+  headerAvatarText: { color: "#fff", fontSize: 13, fontWeight: "900" },
   headerTitle: { color: "#fff", fontSize: 16, fontWeight: "800", letterSpacing: 0.3 },
   headerSub: { color: "rgba(255,255,255,0.8)", fontSize: 12, marginTop: 1 },
   headerRight: { flexDirection: "row", alignItems: "center", gap: 8 },

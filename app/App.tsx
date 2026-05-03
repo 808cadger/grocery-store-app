@@ -10,6 +10,7 @@ import HomeScreen from "./screens/HomeScreen";
 import ShoppingListScreen from "./screens/ShoppingListScreen";
 import StoreMapScreen from "./screens/StoreMapScreen";
 import OnboardingScreen, { PREFS_KEY, UserPreferences } from "./screens/OnboardingScreen";
+import ChatBar from "./components/ChatBar";
 
 const Tab = createBottomTabNavigator();
 
@@ -45,6 +46,7 @@ export default function App() {
       <SafeAreaProvider>
         <StatusBar style="dark" />
         <OnboardingScreen onComplete={() => setOnboardingDone(true)} />
+        <ChatBar placeholder="Talk to the shopping avatar..." />
       </SafeAreaProvider>
     );
   }
