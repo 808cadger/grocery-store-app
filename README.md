@@ -1,5 +1,12 @@
 # time~save~shopping
 
+## Download Links
+
+- **iOS / iPhone:** Open the PWA in Safari: [Grocery Store App iOS install](https://808cadger.github.io/grocery-store-app/) and choose **Share -> Add to Home Screen**.
+- **Android:** Download the latest APK from GitHub Releases: [Grocery Store App Android releases](https://github.com/808cadger/grocery-store-app/releases/latest).
+- **Source download:** [Download the GitHub source ZIP](https://github.com/808cadger/grocery-store-app/archive/refs/heads/main.zip).
+
+
 <!-- INSTALL-START -->
 ## Install and run
 
