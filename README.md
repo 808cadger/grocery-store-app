@@ -1,10 +1,35 @@
-# time~save~shopping
+# Grocery Store App
+
+[![Release](https://img.shields.io/github/v/release/808cadger/grocery-store-app?include_prereleases&label=release)](https://github.com/808cadger/grocery-store-app/releases)
+[![Last commit](https://img.shields.io/github/last-commit/808cadger/grocery-store-app)](https://github.com/808cadger/grocery-store-app/commits)
+[![License](https://img.shields.io/github/license/808cadger/grocery-store-app)](https://github.com/808cadger/grocery-store-app/blob/HEAD/LICENSE)
+![Platforms](https://img.shields.io/badge/platform-Expo%2FReact%20Native%2C%20Android%2C%20Web%2C%20API%20service-2563eb)
+
+AI grocery assistant for shopping lists, store-aware workflows, and mobile shopping guidance.
+
+## Project Snapshot
+
+| Area | Details |
+|------|---------|
+| Primary use case | AI grocery assistant for shopping lists, store-aware workflows, and mobile shopping guidance. |
+| Platforms | Expo/React Native, Android, Web, API service |
+| Core stack | Expo, React Native, Android, FastAPI |
+| Review first | `app`, `backend` |
 
 ## Download Links
 
-- **iOS / iPhone:** Open the PWA in Safari: [Grocery Store App iOS install](https://808cadger.github.io/grocery-store-app/) and choose **Share -> Add to Home Screen**.
-- **Android:** Download the latest APK from GitHub Releases: [Grocery Store App Android releases](https://github.com/808cadger/grocery-store-app/releases/latest).
-- **Source download:** [Download the GitHub source ZIP](https://github.com/808cadger/grocery-store-app/archive/refs/heads/main.zip).
+| Platform | Link |
+|----------|------|
+| iOS / iPhone | [Open the PWA in Safari](https://808cadger.github.io/grocery-store-app/) and choose **Share -> Add to Home Screen** |
+| Android | [Download the latest APK from GitHub Releases](https://github.com/808cadger/grocery-store-app/releases/latest) |
+| Source | [Download the GitHub source ZIP](https://github.com/808cadger/grocery-store-app/archive/refs/heads/main.zip) |
+| Repository | [View on GitHub](https://github.com/808cadger/grocery-store-app) |
+
+## Why This Repo Is Worth Reviewing
+
+- Mobile-first architecture fits in-store use.
+- Backend/API service is documented for AI-powered shopping features.
+- Android build path is ready for device testing.
 
 
 <!-- INSTALL-START -->
